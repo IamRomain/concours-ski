@@ -13,21 +13,41 @@
 
 <body>
 
+
+	<div class="topnav" id="myTopnav">
+		<a href="index.html"><img id="top-image" src="images/logos/logo-gen.png"></a>
+		<a href="#container-flex-image">Informations</a>
+		<a href="#meribel">Méribel</a>
+		<a href="#3vallees">Les 3 vallées</a>
+		<a href="#partenaires">Partenaires</a>
+		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+	</div>
+
+
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
+
+
+
+
 	<div class="container">
-		<div class="container-top container-back-color">
-			<div id="container-image">
-				<img id="top-image" src="images/logos/logo-gen.png">
-			</div>
-			<h1 id="top-text">GAGNE TON SÉJOUR AU SKI!</h1>
 
 
-			<div class="container-image">
-				<img src="images/photos/1.jpg">
-			</div>
+
+		<div class="container-image">
+			<img src="images/photos/1.jpg">
 		</div>
 
 		<div class="container-text" id="text-date">
-			<p>Participez jusqu’au 15 décembre 2017 à notre jeu concours et tentez de gagner un séjour au ski pour 2 personnes a Méribel !</p>
+			<p>Gagnez votre séjour au ski. Participez jusqu’au 15 décembre 2017 à notre jeu concours et tentez de gagner un séjour au ski pour 2 personnes a Méribel !</p>
 		</div>
 
 
@@ -130,7 +150,7 @@
 
 
 
-			<div>
+			<div id="meribel">
 				<h2>Méribel</h2>
 				<p style="font-weight: normal; text-align: justify; margin: 2.5rem 2rem -1rem ">Particularité de Meribel : son architecture qui se compose d’un ensemble de chalets aux façades de pierres et bois. Aucun immeuble disgracieux à l’horizon, uniquement des chalets et des résidences parfaitement intégrées sur les quatre principaux quartiers de la station : </p>
 				<div id="container-flex-image">
@@ -146,7 +166,7 @@
 
 
 
-			<div class="container-back-color">
+			<div id="3vallees" class="container-back-color">
 				<hr/>
 				<h2 style="padding-top: 1rem;">Les 3 vallées !</h2>
 				<div id="container-flex-image">
@@ -174,7 +194,7 @@
 
 
 
-			<div class="container-footer">
+			<div id="partenaires" class="container-footer">
 				<h2 style="color: white; margin-top: 0; padding: 1rem;">Nos partenaires et Sponsors</h2>
 				<section class="container-logo">
 					<div id="logo">
