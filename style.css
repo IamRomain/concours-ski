@@ -6,16 +6,23 @@ body {
 /* Section Top */
 
 .container-top {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
 	text-align: center;
-	font-family: fantasy;
-	height: 100px;
-	width: 100%;
-	padding: 10px 0;
-	vertical-align: middle;
-	font-size: 1em;
-	margin-bottom:
 }
 
+#top-text {
+	flex: 2;
+	text-align: left;
+}
+
+#top-image {
+	flex: 1;
+	width: 150px;
+	margin: 0.2rem 0;
+}
 
 img {
 	margin-top: 0;
@@ -23,13 +30,28 @@ img {
 	max-height: 100%;
 }
 
+#close-image {
+	text-align: center;
+	height: 42px;
+	width: 42px;
+	margin-bottom: 0.3rem auto;
+	cursor: pointer;
+	border: 1px solid transparent;
+	padding: 0;
+}
+
+button:hover {
+	border-color: black;
+}
+
+
 
 /* First paragraph */
 
 .container-text {
 	font-size: 20px;
 	text-align: justify;
-	margin: 5vh 3vh;
+	margin: 3vh 3vh;
 
 }
 
@@ -53,10 +75,13 @@ img {
 	align-items: center;
 	flex-wrap: wrap;
 
-	margin: 3rem 1rem;
+	margin: 1.5rem 1rem;
 }
 
 @media screen and (max-width:650px) {
+	#top-text {
+		text-align: center;
+	}
 	#container-flex-image {
 		flex-wrap: wrap;
 	}
@@ -78,6 +103,10 @@ img {
 	#container-image:first-child {
 		flex-basis: 100%;
 	}
+
+	input[type=text] {
+		margin: 0;
+	}
 }
 
 
@@ -85,7 +114,6 @@ img {
 
 #container-form {
 	flex: 1;
-	padding: 1rem;
 }
 
 
@@ -126,6 +154,7 @@ input[type=text]:focus {
 
 h2 {
 	text-align: center;
+	padding: 0 1rem;
 }
 
 
@@ -155,4 +184,45 @@ h2 {
 #image {
 	flex: 1;
 	padding: 0 1rem;
+}
+
+.container-footer {
+	background-color: #111C2E;
+	margin: -2rem 0;
+}
+
+
+
+.container-logo {
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	flex-wrap: wrap;
+}
+
+
+#logo {
+	flex-grow: 1;
+	padding: 0 1rem;
+	height: 60px;
+	width: 25%;
+	box-sizing: border-box;
+}
+
+
+@media screen and (min-width:1000px) {
+	.container-logo {
+		flex-wrap: nowrap;
+	}
+
+	#logo {
+		flex-grow: 1;
+		padding: 1rem;
+
+		height: 80px;
+		width: 33%;
+		box-sizing: border-box;
+	}
+
 }

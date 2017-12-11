@@ -2,42 +2,49 @@
 <html>
 
 <head>
-	<meta charset="UTF8" />
+	<meta charset="UTF8" name="viewport" content="width=device-width, user-scalable=no" />
 	<link rel="stylesheet" href="style.css">
 
 	<title>Séjour au ski</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 
 <body>
 
 	<div class="container">
 		<div class="container-top container-back-color">
-			<h1>GAGNE TON SÉJOUR AU SKI!
-			</h1>
-		</div>
-		<div class="container-image">
-			<img src="images/1.jpg">
+			<div id="container-image">
+				<img id="top-image" src="images/logos/logo-gen.png">
+			</div>
+			<h1 id="top-text">GAGNE TON SÉJOUR AU SKI!</h1>
+
+
+			<div class="container-image">
+				<img src="images/photos/1.jpg">
+			</div>
 		</div>
 
 		<div class="container-text" id="text-date">
-			<p>Participe jusqu’au 15 décembre 2017 à notre jeu concours et tente de gagner un séjour au ski pour 2 personnes a Méribel !</p>
+			<p>Participez jusqu’au 15 décembre 2017 à notre jeu concours et tentez de gagner un séjour au ski pour 2 personnes a Méribel !</p>
 		</div>
 
 
 		<div class="container-back-color">
 			<hr/>
+			<h2>Pour participer, il suffit de remplir ce formulaire !</h2>
 			<div id="container-flex-image">
-
 				<div id="container-image">
-					<img src="images/2.jpg">
+					<img src="images/photos/2.jpg">
 				</div>
 
 				<div id="container-form" class="container-form">
 
-					<form action="result.html" method="post">
-						<input id="input" type="text" name="firstname" placeholder="Votre Prénom"><br>
-						<input id="input" type="text" name="lastname" placeholder="Votre nom"><br>
-						<input id="input" type="text" name="mail" placeholder="Votre adresse email"><br>
+					<form onSubmit="alert('Votre participation est bien enregistrée !');">
+						<input id="input" type="text" name="firstname" placeholder="Prénom"><br>
+						<input id="input" type="text" name="lastname" placeholder="Nom"><br>
+						<input id="input" type="text" name="mail" placeholder="Adresse email"><br>
 						<br>
 						<input type="submit" value="Submit">
 					</form>
@@ -47,63 +54,184 @@
 			<hr/>
 		</div>
 
+		<!---
+		<script>
+			$(document).ready(function() {
+				$("form").submit(function() {
+					alert("Votre participation est bien enregistrée !");
+				});
+			});
+		</script>
+		--->
+
+		<table class="nav" align="center">
+			<tr>
+				<td>
+					<button id="close-image" onclick="showHide()" style="text-align: center;"><img src="images/arrow-down.png"></button>
+				</td>
+			</tr>
+		</table>
 
 
-		<div id="container-flex-image">
-			<div id="container-infos">
-				<div>
-					<p>Un séjour pour 2 personnes de 6 nuits, 5 jours de ski, transports et forfaits de ski offerts pour l’occasion </p>
+
+
+		<div id="showHide">
+			<div id="container-flex-image">
+				<div id="container-infos">
+					<div>
+						<p>Un séjour pour 2 personnes de 6 nuits, 5 jours de ski, transports et forfaits de ski offerts pour l’occasion </p>
+					</div>
+
+					<div class="italic">
+						<p>La dotation du Jeu est la suivante : Un séjour de ski pour deux personnes à Méribel. Le lot comprend les prestations suivantes :</p>
+
+						<table>
+							<tr>- Le transport en fonction de la provenance des gagnants</tr><br/>
+							<tr>- Le logement pour 5 jours / 6 nuits dans les stations Ski</tr><br/>
+							<tr>- Les accès aux pistes soit 5 jours de ski</tr><br/>
+							<tr>- 5 jours de location de voiture</tr><br/>
+							<tr>- 2 vestes de ski Eider</tr>
+						</table>
+						<p>La valeur du lot est estimée à 3000€. Les frais sur place (nourriture, extras,etc.) seront à la charge du gagnant.</p>
+
+					</div>
 				</div>
 
-				<div class="italic">
-					<p>La dotation du Jeu est la suivante : Un séjour de ski pour deux personnes à Méribel. Le lot comprend les prestations suivantes :</p>
+				<div id="container-image">
+					<img src="images/photos/4.jpg">
+				</div>
+			</div>
 
-					<table>
-						<tr>- Le transport en fonction de la provenance des gagnants</tr><br/>
-						<tr>- Le logement pour 5 jours / 6 nuits dans les stations Ski</tr><br/>
-						<tr>- Les accès aux pistes soit 5 jours de ski</tr><br/>
-						<tr>- 5 jours de location de voiture</tr><br/>
-						<tr>- 2 vestes de ski Eider</tr>
-					</table>
-					<p>La valeur du lot est estimée à 3000€. Les frais sur place (nourriture, extras,etc.) seront à la charge du gagnant.</p>
+
+			<div class="container-back-color">
+				<hr/>
+
+				<h2>Venez profiter du meilleur domaine skiable du monde</h2>
+				<div class="container-3-images">
+					<div id="image">
+						<img src="images/photos/3.2.jpg">
+						<p>Skiez peut importe votre niveau</p>
+					</div>
+
+					<div id="image">
+						<img src="images/photos/3.1.jpg">
+						<p>sur 3000km de pistes</p>
+					</div>
+
+					<div id="image">
+						<img src="images/photos/3.3.jpg">
+						<p>et 10km de dénivelé</p>
+
+					</div>
+				</div>
+				<hr/>
+			</div>
+
+
+
+
+			<div>
+				<h2>Méribel</h2>
+				<p style="font-weight: normal; text-align: justify; margin: 2.5rem 2rem -1rem ">Particularité de Meribel : son architecture qui se compose d’un ensemble de chalets aux façades de pierres et bois. Aucun immeuble disgracieux à l’horizon, uniquement des chalets et des résidences parfaitement intégrées sur les quatre principaux quartiers de la station : </p>
+				<div id="container-flex-image">
+					<div id="container-infos">
+						<p style="font-weight: normal; text-align: justify;"><strong>►&nbsp; Les Allues</strong> : Chef lieu de la vallée de Méribel, le village des Allues est un véritable village savoyard avec son four à pain, ses vieilles granges et ses ruelles étroites. <br><br><strong>►&nbsp; Méribel Village</strong> : Petit hameau savoyard traditionnel avec ses chalets et granges réaménagées, sa chapelle, son four à pain.<br><br><strong>►&nbsp; Méribel Centre</strong> : C’est le plus grand village de la Vallée. Parsemé de beaux chalets privés et de belles résidences-chalets de taille moyenne habillés de bois blond et de pierres du pays, avec toits en double pente. <br><br><strong>►&nbsp; Méribel Mottaret</strong> : Situé au sommet de la vallée de Méribel, le village de Méribel Mottaret offre un accès privilégié aux 600 km de pistes de ski des 3 Vallées.</p>
+					</div>
+
+					<div id="container-image">
+						<img src="images/photos/6.jpg">
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="container-back-color">
+				<hr/>
+				<h2 style="padding-top: 1rem;">Les 3 vallées !</h2>
+				<div id="container-flex-image">
+					<div id="container-image">
+						<img src="images/photos/plan-pistes.jpg" onClick="swipe();" />
+						<h4>Clique sur l'image pour l'agrandir</h4>
+					</div>
+
+					<div id="container-infos">
+
+						<p style="margin: 0 0 3.8rem 0; font-weight: normal; text-align: justify; ">Avec ses stations de renom, le domaine des 3 Vallées, grâce à sa haute altitude et ses infrastructures offre au skieur un nombre infini de pistes avec une neige et un ski de très haute qualité. Sur les 328 pistes que compte le domaine, 13% sont des pistes vertes, 39% des bleues, 38% des rouges, et 10% des noires, soit pratiquement la moitié de pistes faciles et la moitié de pistes experts. Le domaine skiable est aussi bien conçu pour les débutants et les enfants que pour les skieurs chevronnés. Ces derniers pourront même s'essayer aux joies du ski hors-piste, encadrés par des professionnels de la montagne, sur les 400km² que couvrent la totalité des 3 Vallées, soit 4 fois la superficie de Paris.</p>
+
+					</div>
 
 				</div>
 			</div>
 
-			<div id="container-image">
-				<img src="images/4.jpg">
+			<script>
+				function swipe() {
+					window.open("images/photos/plan-pistes.jpg", "_blank");
+				}
+			</script>
+
+
+
+
+
+			<div class="container-footer">
+				<h2 style="color: white; margin-top: 0; padding: 1rem;">Nos partenaires et Sponsors</h2>
+				<section class="container-logo">
+					<div id="logo">
+						<img src="images/logos/famille-plus.png" title="Famille Plus">
+					</div>
+					<div id="logo">
+						<img src="images/logos/france-montagne.png" title="France Montagne">
+					</div>
+					<div id="logo">
+						<img src="images/logos/qualite-tourisme.png" title="Qualité Tourisme">
+					</div>
+					<div id="logo">
+						<img src="images/logos/republique-francaise.png" title="République Française">
+					</div>
+					<div id="logo">
+						<img src="images/logos/radio-meribel.png" title="Radio Méribel">
+					</div>
+					<div id="logo">
+						<img src="images/logos/skiset.png" title="Skiset">
+					</div>
+					<div id="logo">
+						<img src="images/logos/mammoth.png" title="Mammoth">
+					</div>
+					<div id="logo">
+						<img src="images/logos/esf.png" title="ESF">
+					</div>
+					<div id="logo">
+						<img src="images/logos/haribo_logo.png" title="Haribo">
+					</div>
+					<div id="logo">
+						<img src="images/logos/kia.png" title="Kia">
+					</div>
+					<div id="logo">
+						<img src="images/logos/rio.png" title="Rio">
+					</div>
+					<div id="logo">
+						<img src="images/logos/bnp.png" title="BNP Paribas">
+					</div>
+				</section>
 			</div>
 		</div>
-
-
-
-		<div class="container-back-color">
-			<hr/>
-
-			<h2>Venez profiter du meilleur domaine skiable du monde !</h2>
-			<section class="container-3-images">
-				<div id="image">
-					<img src="images/3.2.jpg">
-					<p>Skiez peut importe votre niveau</p>
-				</div>
-
-				<div id="image">
-					<img src="images/3.1.jpg">
-					<p>Sur 3000km de pistes</p>
-				</div>
-
-				<div id="image">
-					<img src="images/3.3.jpg">
-					<p>et 10000m de dénivelé</p>
-				</div>
-
-			</section>
-			<hr/>
-		</div>
-
-
-
 	</div>
+
+
+
+	<script>
+		function showHide() {
+			var x = document.getElementById("showHide");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+			} else {
+				x.style.display = "none";
+			}
+		}
+	</script>
+
+
 </body>
 
 </html>
