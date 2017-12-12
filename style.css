@@ -112,14 +112,12 @@ button:hover {
 }
 
 
-
 /* First paragraph */
 
 .container-text {
 	font-size: 20px;
 	text-align: justify;
 	margin: 3vh 3vh;
-
 }
 
 .italic {
@@ -174,15 +172,20 @@ button:hover {
 	input[type=text] {
 		margin: 0;
 	}
+	.container-3-images {
+		flex-wrap: wrap;
+	}
+
+	#image:first-child {
+		flex-basis: 100%;
+		margin: 1rem;
+	}
 }
-
-
 
 
 #container-form {
 	flex: 1;
 }
-
 
 #input {
 	width: 80%;
@@ -215,7 +218,6 @@ input[type=text]:focus {
 	padding: 0 1rem;
 	font-weight: bold;
 	font-size: 1em;
-
 }
 
 
@@ -223,21 +225,6 @@ h2 {
 	text-align: center;
 	padding: 0 1rem;
 }
-
-
-
-@media screen and (max-width:650px) {
-	.container-3-images {
-		flex-wrap: wrap;
-	}
-
-	#image:first-child {
-		flex-basis: 100%;
-		margin: 1rem;
-	}
-
-}
-
 
 .container-3-images {
 	text-align: center;
@@ -253,12 +240,34 @@ h2 {
 	padding: 0 1rem;
 }
 
+
+#infos-meribel {
+	font-weight: normal;
+	text-align: justify;
+	margin: 2.5rem 2rem -1rem;
+}
+
+#desc-meribel {
+	font-weight: normal;
+	text-align: justify;
+}
+
+#infos-vallees {
+	margin: 0 0 3.8rem 0;
+	font-weight: normal;
+	text-align: justify;
+}
+
 .container-footer {
 	background-color: #111C2E;
 	margin: -2rem 0;
 }
 
-
+#partenaires {
+	color: white;
+	margin-top: 0;
+	padding: 1rem;
+}
 
 .container-logo {
 	text-align: center;
@@ -268,7 +277,6 @@ h2 {
 	flex-wrap: wrap;
 }
 
-
 #logo {
 	flex-grow: 1;
 	padding: 0 1rem;
@@ -276,7 +284,6 @@ h2 {
 	width: 25%;
 	box-sizing: border-box;
 }
-
 
 @media screen and (min-width:1000px) {
 	.container-logo {

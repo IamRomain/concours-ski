@@ -7,23 +7,22 @@
 
 	<title>Séjour au ski</title>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 
 <body>
 
-
+	<!-- Navbar -->
 	<div class="topnav" id="myTopnav">
 		<a href="index.html"><img id="top-image" src="images/logos/logo-gen.png"></a>
-		<a href="#container-flex-image">Informations</a>
+		<a href="#infos">Informations</a>
 		<a href="#meribel">Méribel</a>
 		<a href="#3vallees">Les 3 vallées</a>
 		<a href="#partenaires">Partenaires</a>
 		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 	</div>
 
-
+	<!-- Script permettant de rendre la navbar responsive -->
 	<script>
 		function myFunction() {
 			var x = document.getElementById("myTopnav");
@@ -36,22 +35,22 @@
 	</script>
 
 
-
-
+	<!-- Container global -->
 	<div class="container">
 
+		<!-- Section top (inclus 1e image et intro) -->
+		<div>
+			<div class="container-image">
+				<img src="images/photos/1.jpg">
+			</div>
 
-
-		<div class="container-image">
-			<img src="images/photos/1.jpg">
+			<div class="container-text" id="text-date">
+				<p>Gagnez votre séjour au ski. Participez jusqu’au 15 décembre 2017 à notre jeu concours et tentez de remporter un séjour au ski pour 2 personnes a Méribel !</p>
+			</div>
 		</div>
 
-		<div class="container-text" id="text-date">
-			<p>Gagnez votre séjour au ski. Participez jusqu’au 15 décembre 2017 à notre jeu concours et tentez de gagner un séjour au ski pour 2 personnes a Méribel !</p>
-		</div>
-
-
-		<div class="container-back-color">
+		<!-- Section formulaire (inclus le skieur et le formulaire) -->
+		<div class="container-back-color" id="infos">
 			<hr/>
 			<h2>Pour participer, il suffit de remplir ce formulaire !</h2>
 			<div id="container-flex-image">
@@ -59,8 +58,8 @@
 					<img src="images/photos/2.jpg">
 				</div>
 
+				<!-- Formulaire -->
 				<div id="container-form" class="container-form">
-
 					<form onSubmit="alert('Votre participation est bien enregistrée !');">
 						<input id="input" type="text" name="firstname" placeholder="Prénom"><br>
 						<input id="input" type="text" name="lastname" placeholder="Nom"><br>
@@ -74,7 +73,7 @@
 			<hr/>
 		</div>
 
-		<!---
+		<!--- Script qui permet d'afficher un message de validation pour le formulaire (fait la meme chose que le onSubmit="alert")
 		<script>
 			$(document).ready(function() {
 				$("form").submit(function() {
@@ -84,19 +83,35 @@
 		</script>
 		--->
 
+		<!-- Fleche pour ouvrir/fermer toutes les détails du site -->
 		<table class="nav" align="center">
 			<tr>
 				<td>
+					<!-- Boutton qui appelle la fonction showHide() -->
 					<button id="close-image" onclick="showHide()" style="text-align: center;"><img src="images/arrow-down.png"></button>
 				</td>
 			</tr>
 		</table>
 
+		<!-- Script permettant d'afficher ou de fermer les détails du site (de base ils sont fermés) -->
+		<script>
+			function showHide() {
+				var x = document.getElementById("showHide");
+				if (x.style.display === "none") {
+					x.style.display = "block";
+				} else {
+					x.style.display = "none";
+				}
+			}
+		</script>
 
-
-
+		<!-- Section contenant tous les détails du site, masqués de base -->
 		<div id="showHide">
+
+			<!-- Section contenant les explications du concours avec une image -->
 			<div id="container-flex-image">
+
+				<!-- La partie informations du concours -->
 				<div id="container-infos">
 					<div>
 						<p>Un séjour pour 2 personnes de 6 nuits, 5 jours de ski, transports et forfaits de ski offerts pour l’occasion </p>
@@ -117,47 +132,53 @@
 					</div>
 				</div>
 
+				<!-- L'image -->
 				<div id="container-image">
 					<img src="images/photos/4.jpg">
 				</div>
 			</div>
 
-
+			<!-- Class permettant de mettre le fond de couleur -->
 			<div class="container-back-color">
 				<hr/>
 
-				<h2>Venez profiter du meilleur domaine skiable du monde</h2>
-				<div class="container-3-images">
-					<div id="image">
-						<img src="images/photos/3.2.jpg">
-						<p>Skiez peut importe votre niveau</p>
-					</div>
+				<!-- Section "Venez profiter ..." -->
+				<div>
+					<h2>Venez profiter du meilleur domaine skiable du monde</h2>
+					<!-- Section contenant les 3 images cote a cote -->
+					<div class="container-3-images">
+						<div id="image">
+							<img src="images/photos/3.2.jpg">
+							<p>Skiez peut importe votre niveau</p>
+						</div>
 
-					<div id="image">
-						<img src="images/photos/3.1.jpg">
-						<p>sur 3000km de pistes</p>
-					</div>
+						<div id="image">
+							<img src="images/photos/3.1.jpg">
+							<p>sur 3000km de pistes</p>
+						</div>
 
-					<div id="image">
-						<img src="images/photos/3.3.jpg">
-						<p>et 10km de dénivelé</p>
-
+						<div id="image">
+							<img src="images/photos/3.3.jpg">
+							<p>et 10km de dénivelé</p>
+						</div>
 					</div>
+					<hr/>
 				</div>
-				<hr/>
 			</div>
 
-
-
-
+			<!-- Section Méribel -->
 			<div id="meribel">
 				<h2>Méribel</h2>
-				<p style="font-weight: normal; text-align: justify; margin: 2.5rem 2rem -1rem ">Particularité de Meribel : son architecture qui se compose d’un ensemble de chalets aux façades de pierres et bois. Aucun immeuble disgracieux à l’horizon, uniquement des chalets et des résidences parfaitement intégrées sur les quatre principaux quartiers de la station : </p>
+				<p id="infos-meribel">Particularité de Meribel : son architecture qui se compose d’un ensemble de chalets aux façades de pierres et bois. Aucun immeuble disgracieux à l’horizon, uniquement des chalets et des résidences parfaitement intégrées sur les quatre principaux quartiers de la station :</p>
+
+				<!-- Section contenant la desc de la station Méribel et l'image -->
 				<div id="container-flex-image">
+					<!-- Section infos (gros paragraphe pas beau) -->
 					<div id="container-infos">
-						<p style="font-weight: normal; text-align: justify;"><strong>►&nbsp; Les Allues</strong> : Chef lieu de la vallée de Méribel, le village des Allues est un véritable village savoyard avec son four à pain, ses vieilles granges et ses ruelles étroites. <br><br><strong>►&nbsp; Méribel Village</strong> : Petit hameau savoyard traditionnel avec ses chalets et granges réaménagées, sa chapelle, son four à pain.<br><br><strong>►&nbsp; Méribel Centre</strong> : C’est le plus grand village de la Vallée. Parsemé de beaux chalets privés et de belles résidences-chalets de taille moyenne habillés de bois blond et de pierres du pays, avec toits en double pente. <br><br><strong>►&nbsp; Méribel Mottaret</strong> : Situé au sommet de la vallée de Méribel, le village de Méribel Mottaret offre un accès privilégié aux 600 km de pistes de ski des 3 Vallées.</p>
+						<p id="desc-meribel"><strong>►&nbsp; Les Allues</strong> : Chef lieu de la vallée de Méribel, le village des Allues est un véritable village savoyard avec son four à pain, ses vieilles granges et ses ruelles étroites. <br><br><strong>►&nbsp; Méribel Village</strong> : Petit hameau savoyard traditionnel avec ses chalets et granges réaménagées, sa chapelle, son four à pain.<br><br><strong>►&nbsp; Méribel Centre</strong> : C’est le plus grand village de la Vallée. Parsemé de beaux chalets privés et de belles résidences-chalets de taille moyenne habillés de bois blond et de pierres du pays, avec toits en double pente. <br><br><strong>►&nbsp; Méribel Mottaret</strong> : Situé au sommet de la vallée de Méribel, le village de Méribel Mottaret offre un accès privilégié aux 600 km de pistes de ski des 3 Vallées.</p>
 					</div>
 
+					<!-- Image de droite -->
 					<div id="container-image">
 						<img src="images/photos/6.jpg">
 					</div>
@@ -165,25 +186,27 @@
 			</div>
 
 
-
+			<!-- Section 3 vallees -->
 			<div id="3vallees" class="container-back-color">
 				<hr/>
-				<h2 style="padding-top: 1rem;">Les 3 vallées !</h2>
+				<h2>Les 3 vallées !</h2>
+
+				<!-- Image de gauche qui peut etre agrandit par un clic -->
 				<div id="container-flex-image">
 					<div id="container-image">
+						<!-- Le onClick permet d'agrandir l'image -->
 						<img src="images/photos/plan-pistes.jpg" onClick="swipe();" />
 						<h4>Clique sur l'image pour l'agrandir</h4>
 					</div>
 
+					<!-- Informations a droite (encore un paragraphe bien moche) -->
 					<div id="container-infos">
-
-						<p style="margin: 0 0 3.8rem 0; font-weight: normal; text-align: justify; ">Avec ses stations de renom, le domaine des 3 Vallées, grâce à sa haute altitude et ses infrastructures offre au skieur un nombre infini de pistes avec une neige et un ski de très haute qualité. Sur les 328 pistes que compte le domaine, 13% sont des pistes vertes, 39% des bleues, 38% des rouges, et 10% des noires, soit pratiquement la moitié de pistes faciles et la moitié de pistes experts. Le domaine skiable est aussi bien conçu pour les débutants et les enfants que pour les skieurs chevronnés. Ces derniers pourront même s'essayer aux joies du ski hors-piste, encadrés par des professionnels de la montagne, sur les 400km² que couvrent la totalité des 3 Vallées, soit 4 fois la superficie de Paris.</p>
-
+						<p id="infos-vallees">Avec ses stations de renom, le domaine des 3 Vallées, grâce à sa haute altitude et ses infrastructures offre au skieur un nombre infini de pistes avec une neige et un ski de très haute qualité. Sur les 328 pistes que compte le domaine, 13% sont des pistes vertes, 39% des bleues, 38% des rouges, et 10% des noires, soit pratiquement la moitié de pistes faciles et la moitié de pistes experts. Le domaine skiable est aussi bien conçu pour les débutants et les enfants que pour les skieurs chevronnés. Ces derniers pourront même s'essayer aux joies du ski hors-piste, encadrés par des professionnels de la montagne, sur les 400km² que couvrent la totalité des 3 Vallées, soit 4 fois la superficie de Paris.</p>
 					</div>
-
 				</div>
 			</div>
 
+			<!-- Fonction permettant d'agrandir l'image (en l'ouvrant dans un nouvel onglet) -->
 			<script>
 				function swipe() {
 					window.open("images/photos/plan-pistes.jpg", "_blank");
@@ -191,11 +214,11 @@
 			</script>
 
 
-
-
-
+			<!-- Section partenaires et sponsors -->
 			<div id="partenaires" class="container-footer">
-				<h2 style="color: white; margin-top: 0; padding: 1rem;">Nos partenaires et Sponsors</h2>
+				<h2 id="partenaires">Nos partenaires et Sponsors</h2>
+
+				<!-- Section contenant les logos de tous les partenaires -->
 				<section class="container-logo">
 					<div id="logo">
 						<img src="images/logos/famille-plus.png" title="Famille Plus">
@@ -237,19 +260,6 @@
 			</div>
 		</div>
 	</div>
-
-
-
-	<script>
-		function showHide() {
-			var x = document.getElementById("showHide");
-			if (x.style.display === "none") {
-				x.style.display = "block";
-			} else {
-				x.style.display = "none";
-			}
-		}
-	</script>
 
 
 </body>
