@@ -143,12 +143,11 @@ img {
 #input {
 	width: 80%;
 	font-size: 15px;
-	margin: 1.5rem;
+	margin: 1rem;
 	border: 1px solid black;
 }
 
 input[type=submit] {
-
 	width: 70%;
 	border: 1px solid black;
 	font-size: 15px;
@@ -164,6 +163,10 @@ input[type=text]:focus {
 	background-color: lightblue;
 }
 
+input[type=text]:hover {
+	background-color: darkseagreen;
+}
+
 /* -------------------------------------------------- */
 
 /* -------------------------------------------------- */
@@ -173,6 +176,29 @@ input[type=text]:focus {
 #container-image {
 	flex: 1;
 	padding: 0 1rem;
+}
+
+.rotating-image img {
+	height: 180px;
+	width: 180px;
+
+	-webkit-transition-duration: 0.8s;
+	-moz-transition-duration: 0.8s;
+	-o-transition-duration: 0.8s;
+	transition-duration: 0.8s;
+
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	-o-transition-property: -o-transform;
+	transition-property: transform;
+
+	overflow: hidden;
+}
+
+.rotating-image:hover img {
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
 }
 
 
